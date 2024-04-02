@@ -32,6 +32,67 @@ ul {
 a{
     text-decoration: none;
  }
+.loading {
+    position: relative;
+    z-index: 200;
+
+}
+.loading-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #0000008f;
+    opacity: 1;
+    transition: 600ms all ease-out;
+}
+.img-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.img-container h3 {
+    color: white;
+    font-size: 30px;
+}
+.loading-img {
+    opacity: 1;
+    transition: 600ms all ease-out; 
+    border-radius: 20px;
+    transform: translateY(-30%);
+}
+.dark-button {
+    width: 100px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dark-button button {
+    background-color: bisque;
+    color: #46281f;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 9px;
+    cursor: pointer;
+
+}
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+.light {
+    background-color: whitesmoke;
+    color: white;
+}
 .main-title {
   margin: 0 auto 80px;
   border: 2px solid var(--main-color);
@@ -41,6 +102,7 @@ a{
   position: relative;
   z-index: 1;
   transition: var(--main-transition);
+  margin-top: 40px;
 
 }
 .main-title::before,.main-title::after{
@@ -380,7 +442,7 @@ a{
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
   position: relative;
-  padding-right: 140px;
+  /* padding-right: 140px; */
 
 }
 .menue2 .container {
@@ -443,7 +505,7 @@ a{
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     position: relative;
-    padding-right: 140px;
+    /* padding-right: 140px; */
     background-color: var(--section-background);
 }
 
@@ -498,7 +560,7 @@ a{
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
   position: relative;
-  padding-right: 140px;
+  /* padding-right: 140px; */
   background-color: white;
 
 }
@@ -643,7 +705,7 @@ a{
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     position: relative;
-    padding-right: 140px;
+    /* padding-right: 140px; */
     background-color: var(--section-background);
 }
 .testmonial .container {
@@ -694,7 +756,7 @@ a{
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     position: relative;
-    padding-right: 140px;
+    /* padding-right: 140px; */
 }
 .team .container {
     display: grid;
@@ -799,12 +861,12 @@ a{
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     position: relative;
-    padding-right: 140px;
+    /* padding-right: 140px; */
     background-color: var(--section-background);
 }
-.serv {
+/* .serv {
     margin-left: 600px;
-}
+} */
 .services .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
@@ -892,7 +954,7 @@ a{
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     position: relative;
-    padding-right: 140px;
+    /* padding-right: 140px; */
 }
 
 .top-rated .container {
@@ -936,9 +998,10 @@ a{
 .top .progress{
     background-color: var(--main-color);
     height: 30px;
-    width: 100%;
+    width: calc(100%-150px);
     position: relative;
     border-radius: 4px;
+    overflow: hidden;
 }
 .top .progress span{
     position: absolute;
@@ -946,6 +1009,7 @@ a{
     left: 0;
     height: 30px;
     background-color: var(--section-background);
+    transition:all 2s ;
     
 }
 /* end top-rated */
@@ -954,7 +1018,7 @@ a{
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     position: relative;
-    padding-right: 140px;
+    /* padding-right: 140px; */
     background-color: var(--section-background);
 }
 .events .container{
@@ -1034,9 +1098,9 @@ a{
     margin-top: 50px;
 }
 
-.latest{
+/* .latest{
     margin-left: 600px;
-}
+} */
 .events .subscribe form{ 
   width:600px;
   margin:20px auto;
@@ -1102,7 +1166,7 @@ a{
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     position: relative;
-    padding-right: 140px;
+    /* padding-right: 140px; */
 }
 .pricing .container{
    display: grid;
@@ -1211,9 +1275,7 @@ a{
 .time {
    color: #777; 
 }
-.pricing .container .box ul {
-    
-  }
+
 .pricing .container .box ul li {
     padding: 20px;
     border: 1px solid #eee;
@@ -1257,12 +1319,12 @@ a{
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     position: relative;
-    padding-right: 140px;
+    /* padding-right: 140px; */
     background-color: var(--section-background);
 }
-.video-main{
+/* .video-main{
     margin-left: 600px;
-}
+} */
 .videos .holder{
     display: flex;
     justify-content: center;

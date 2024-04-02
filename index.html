@@ -11,7 +11,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Ubuntu:wght@300&family=Work+Sans:ital,wght@0,100;0,600;0,800;1,200;1,300;1,500;1,600;1,700&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body id="body">
+      <div class="loading">
+        <div class="loading-bg">
+         <div class="img-container">
+          <img src="images/cheezecake-bluebery.jpeg" width="250px" height="300px" class="loading-img">
+          <h3> Wait until it will loading </h3>
+         </div>
+         
+        </div>
+      </div>
       <!-- start header -->
       <div class="header" id="header">
         <div class="container">
@@ -64,6 +73,11 @@
 
                 <!--end mega menue -->
                 </li>
+                <li>
+                  <div class="dark-button">
+                    <button onclick="darkMood()">Dark Mood</button>
+                  </div>
+                </li>  
                
             </ul>
         </div>
@@ -74,14 +88,14 @@
     <div class="main-page" >
       <div class="container">
         <div class="text">
-            <h1>  welcome to Chesse Cake cafe </h1>
+            <h1 id="welcome"></h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
                   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="images">
-            <img src="images/img3.jpeg" alt="not found">
+            <img src="images/img3.jpeg" alt="not found" id="landimg">
         </div>
       </div>
       <a href="#home" class="go-down">
@@ -382,7 +396,7 @@
     <!-- end juices-->
     <!-- startfeatures-->
     <div class="features" id="features">
-      <h2 class="main-title"> Features</h2>
+      <h2 class="main-title" id="feaureHeading"> Features</h2>
       <div class="container">
         <div class="box natural">
          <div class="img-holder">
@@ -720,25 +734,25 @@
           <div class="top">
             <h3>Bluebery cheese cake <span>80%</span></h3>
             <div class="progress">
-              <span style="width: 80%"></span>
+              <span data-progress="80%"></span>
             </div>
           </div>
           <div class="top">
             <h3>Bluebery milkshake <span>85%</span></h3>
             <div class="progress">
-              <span style="width: 85%"></span>
+              <span data-progress="85%"></span>
             </div>
           </div>
           <div class="top">
             <h3>carmel milkshake <span>70%</span></h3>
             <div class="progress">
-              <span style="width: 70%"></span>
+              <span data-progress="70%"></span>
             </div>
           </div>
           <div class="top">
             <h3> oreo milkshake <span>80%</span></h3>
             <div class="progress">
-              <span style="width: 80%"></span>
+              <span data-progress="80%"></span>
             </div>
           </div>
         </div>
@@ -999,5 +1013,6 @@
 
     </div>
     <!--end footer-->
+    <script src="js/index.js"> </script>
     </body>
 </html>
